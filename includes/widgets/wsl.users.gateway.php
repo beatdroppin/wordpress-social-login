@@ -42,7 +42,7 @@ function wsl_process_login_new_users_gateway( $provider, $redirect_to, $hybridau
 	$hybridauth_user_login       = trim( str_replace( '__', '_', $hybridauth_user_login ) );
 
 	$requested_user_email        = isset( $_REQUEST["user_email"] ) ? trim( $_REQUEST["user_email"] ) : $hybridauth_user_email;
-	$requested_user_login        = isset( $_REQUEST["user_login"] ) ? trim( $_REQUEST["user_login"] ) : $hybridauth_user_login;
+	$requested_user_login        = isset( $_REQUEST["user_name"] ) ? trim( $_REQUEST["user_name"] ) : $hybridauth_user_login;
 
 	$requested_user_email        = apply_filters( 'wsl_new_users_gateway_alter_requested_email', $requested_user_email );
 	$requested_user_login        = apply_filters( 'wsl_new_users_gateway_alter_requested_login', $requested_user_login );
